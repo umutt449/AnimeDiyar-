@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto Anime Arşivi</title>
+</head>
+<body>
+    <h1>Naruto Anime Arşivi</h1>
+    <ul id="episode-list"></ul>
+
+    <script>
+        const episodes = [
+            {title: "Naruto 1. Bölüm", url: "https://myanimelist.net/anime/20/Naruto/1"},
+            {title: "Naruto 2. Bölüm", url: "https://myanimelist.net/anime/20/Naruto/2"},
+            {title: "Naruto 220. Bölüm", url: "https://myanimelist.net/anime/20/Naruto/220"},
+        ];
+
+        const episodeList = document.getElementById('episode-list');
+
+        episodes.forEach(episode => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<a href="${episode.url}" target="_blank">${episode.title}</a>`;
+            episodeList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
